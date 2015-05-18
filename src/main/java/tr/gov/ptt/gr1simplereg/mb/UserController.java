@@ -43,7 +43,7 @@ public class UserController {
            
            //yukarıdaki mesajı sayfaya yönlendirirken saklaması için
            FacesContext.getCurrentInstance().getExternalContext().getFlash().setKeepMessages(true);
-           return "registration.jsf?faces-redirect=true";
+           return "registration.xhtml?faces-redirect=true";
     }
     
 }
