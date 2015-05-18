@@ -7,17 +7,44 @@
         <title>Facelet Title</title>
     </h:head>
     <h:body>
-        
+
         <h:form id="registrationForm">
-            
-            <p:panel header="Headre Registration Form" style="width : 500px"
-                     
-                     >
-                
+
+            <p:panel header="Headre Registration Form" style="width : 500px">
+
+                     <p:messages/>
+
+                     <p:panelGrid columns="2">
+                    <p:outputLabel value="Username:" />
+                    <p:inputText id="userName" label="Username"
+                                 value="#{userController.registrationUser.userName}" />
+
+                    <p:outputLabel value="Password:" />
+                    <p:password id="password" label="Username"
+                                value="#{userController.registrationUser.password}" />
+
+                    <p:outputLabel value="First Name:" />
+                    <p:inputText id="firstName" label="First Name"
+                                 value="#{userController.registrationUser.firstName}" />
+                    
+                    <p:outputLabel value="Last Name:" />
+                    <p:inputText id="lastName" label="Last Name"
+                                 value="#{userController.registrationUser.lastName}" />
+                    
+                    <p:outputLabel value="Email:" />
+                    <p:inputText id="email" label="Email"
+                                 value="#{userController.registrationUser.email}" />
+                    
+                     <p:outputLabel value="Age:" />
+                     <p:inputMask id="age" label="Age"
+                                  value="#{userController.registrationUser.age}" mask="999"
+                                                />
+                    
+                </p:panelGrid>
             </p:panel>
         </h:form>
-        
-        
+
+
     </h:body>
 </html>
 
